@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/calculationsContainer"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/operations"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/calculationsLabel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="0"
+            android:textAlignment="viewEnd"
+            android:textSize="24sp" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/operations"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/calculationsContainer">
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="performOperation"
+            android:text="+"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/minusButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="performOperation"
+            android:text="-"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/devideButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="performOperation"
+            android:text="/"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/multiplyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="performOperation"
+            android:text="*"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/equalsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="performOperation"
+            android:text="="
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/clearButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="clear"
+            android:text="C"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <LinearLayout
+        android:id="@+id/input"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/operations"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculationsContainer">
+
+        <TextView
+            android:id="@+id/curNumLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/inrcButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="changeNum"
+            android:text="up"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/decrButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="changeNum"
+            android:text="down"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/enterButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="enterNum"
+            android:text="enter ->"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/pointButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="addPoint"
+            android:text="point (.)"
+            android:textAllCaps="false" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
