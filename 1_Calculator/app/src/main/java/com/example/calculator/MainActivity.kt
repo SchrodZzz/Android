@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 // hardcoding in small projects is fine ^_^
 // rip 'guard' )-;
 // force unwrap is a grave sin, mostly
+// if let _ = Optional )-;
 
 class MainActivity : AppCompatActivity() {
 
@@ -41,6 +42,10 @@ class MainActivity : AppCompatActivity() {
         outState.putString("resColor", parseColor(calculationsLabel.currentTextColor))
         outState.putString("num", "${curNumLabel.text}")
         outState.putString("numColor", parseColor(curNumLabel.currentTextColor))
+        outState.putString("lastOp", lastOperation)
+        if (lastValue != null) {
+            outState.putDouble("lastVal", lastValue!!)
+        }
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
@@ -50,6 +55,8 @@ class MainActivity : AppCompatActivity() {
         restoreColor(calculationsLabel, savedInstanceState.getString("resColor"))
         curNumLabel.text = savedInstanceState.getString("num")
         restoreColor(curNumLabel, savedInstanceState.getString("numColor"))
+        lastOperation = savedInstanceState.getString("lastOp")
+        lastValue = savedInstanceState.getDouble("lastVal")
     }
 
 
