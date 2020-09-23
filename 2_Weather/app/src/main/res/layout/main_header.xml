@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.20"
+
+        />
+
+    <TextView
+        style="@style/Text.Header"
+
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.60"
+
+        android:text="@string/appName"
+
+        />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.20"
+
+        >
+
+        <Switch
+            android:id="@+id/header_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+
+            android:checked="true"
+
+            />
+    </FrameLayout>
+
+</LinearLayout>

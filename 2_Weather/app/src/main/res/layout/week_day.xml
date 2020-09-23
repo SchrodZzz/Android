@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/week_day_height"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/day_description"
+
+        style="@style/Text.WeekDay.Description"
+
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.40"
+
+        android:text="@string/mock_day_description"
+
+        />
+
+    <ImageView
+        android:id="@+id/day_image"
+
+        style="@style/Image.WeekDay"
+
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.35"
+
+        tools:comment="Set in style"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/day_temp"
+
+        style="@style/Text.WeekDay"
+
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.25"
+
+        android:text="@string/mock_temp"
+
+        />
+</LinearLayout>

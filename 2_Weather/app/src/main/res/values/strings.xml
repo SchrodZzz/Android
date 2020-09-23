@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Task#2 Weather View</string>
+
+    <string name="img_description" translatable="false">No image</string>
+    <string name="template_tempC" translatable="false">%1$d ℃</string>
+    <string name="template_tempF" translatable="false">%1$d ℉</string>
+    <string name="template_tempK" translatable="false">%1$d K</string>
+    <string name="template_digit" translatable="false">%1$d</string>
+    <string name="template_percents" translatable="false">%1$d %%</string>
+
+    <string name="appName">Weather</string>
+    <string name="windDescription">Wind power</string>
+    <string name="pressureDescription">Air pressure</string>
+    <string name="humidityDescription">Humidity</string>
+    <string name="template_windPower">%1$.1f km/h</string>
+    <string name="template_pressure">%1$d mbar</string>
+
+    <string name="mock_temp" translatable="false">-42*</string>
+    <string name="mock_city" translatable="false">Barnaul</string>
+    <string name="mock_day_description" translatable="false">Mon, Today</string>
+    <string name="mock_description" translatable="false">Description</string>
+</resources>

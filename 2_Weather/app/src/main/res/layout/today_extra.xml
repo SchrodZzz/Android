@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/extra_header"
+
+        style="@style/Text.TodayExtra"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25"
+
+        android:text="@string/mock_description"
+
+        />
+
+    <ImageView
+        android:id="@+id/extra_image"
+
+        style="@style/Image.TodayExtra"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.50"
+
+        tools:comment="Set in style"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/extra_value"
+
+        style="@style/Text.TodayExtra"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25"
+
+        android:text="@string/mock_temp"
+
+        />
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_topSeparator_indent">0.10</dimen>
+    <dimen name="main_middleSeparator_indent">0.60</dimen>
+
+    <dimen name="header_textSize">30sp</dimen>
+
+    <dimen name="today_topSeparator_indent">0.20</dimen>
+    <dimen name="today_bottomSeparator_indent">0.65</dimen>
+    <dimen name="today_temp_textSize">60sp</dimen>
+    <dimen name="today_City_textSize">35sp</dimen>
+    <dimen name="today_extra_textSize">20sp</dimen>
+
+    <dimen name="week_day_text_textSize">20sp</dimen>
+
+    <dimen name="divider_margin">8dp</dimen>
+    <dimen name="divider_weight">1dp</dimen>
+    <dimen name="week_day_height">80dp</dimen>
+</resources>

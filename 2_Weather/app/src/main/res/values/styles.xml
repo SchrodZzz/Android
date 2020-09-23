@@ -1,0 +1,86 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Text -->
+    <style name="Text">
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Text.Header" parent="Text">
+        <item name="android:textSize">@dimen/header_textSize</item>
+    </style>
+
+    <style name="Text.TodayExtra" parent="Text">
+        <item name="android:textSize">@dimen/today_extra_textSize</item>
+    </style>
+
+    <style name="Text.TodayTemp" parent="Text">
+        <item name="android:textSize">@dimen/today_temp_textSize</item>
+    </style>
+
+    <style name="Text.TodayCity" parent="Text">
+        <item name="android:textSize">@dimen/today_City_textSize</item>
+    </style>
+
+    <style name="Text.WeekDay" parent="Text">
+        <item name="android:textSize">@dimen/week_day_text_textSize</item>
+    </style>
+
+    <style name="Text.WeekDay.Description" parent="Text.WeekDay">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">10dp</item>
+    </style>
+
+    <!-- Divider -->
+
+    <style name="Divider">
+        <item name="android:background">@android:color/darker_gray</item>
+    </style>
+
+    <style name="Divider.Horizontal" parent="Divider">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/divider_weight</item>
+        <item name="android:layout_marginHorizontal">@dimen/divider_margin</item>
+    </style>
+
+    <style name="Divider.Vertical" parent="Divider">
+        <item name="android:layout_width">@dimen/divider_weight</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_marginVertical">@dimen/divider_margin</item>
+    </style>
+
+    <style name="Divider.Horizontal.Spreading" parent="Divider.Horizontal">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="Divider.Vertical.Spreading" parent="Divider.Vertical">
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+
+    <!-- Images -->
+
+    <style name="Image">
+        <item name="android:contentDescription">@string/img_description</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="Image.TodayWeather" parent="Image">
+        <item name="android:layout_margin">30dp</item>
+    </style>
+
+    <style name="Image.TodayExtra" parent="Image">
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="Image.WeekDay" parent="Image">
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+</resources>

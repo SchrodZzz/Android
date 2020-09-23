@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/today_topSeparator"
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:orientation="horizontal"
+
+        app:layout_constraintGuide_percent="@dimen/today_topSeparator_indent"
+
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/today_bottomSeparator"
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:orientation="horizontal"
+
+        app:layout_constraintGuide_percent="@dimen/today_bottomSeparator_indent"
+
+        />
+
+    <TextView
+        android:id="@+id/today_city"
+
+        style="@style/Text.TodayCity"
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:text="@string/mock_city"
+
+        app:layout_constraintBottom_toTopOf="@id/today_topSeparator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:orientation="horizontal"
+
+        app:layout_constraintBottom_toTopOf="@id/today_bottomSeparator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/today_topSeparator"
+
+        >
+
+        <TextView
+            android:id="@+id/today_temp"
+
+            style="@style/Text.TodayTemp"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.45"
+
+            android:text="@string/mock_temp"
+
+            />
+
+        <ImageView
+            android:id="@+id/today_weatherImg"
+
+            style="@style/Image.TodayWeather"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.50"
+
+            tools:comment="Set in style"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/Divider.Horizontal"
+
+        app:layout_constraintBottom_toTopOf="@id/today_bottomSeparator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/today_bottomSeparator"
+
+        >
+
+        <include
+            android:id="@+id/today_wind"
+
+            layout="@layout/today_extra"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.60"
+
+            />
+
+        <View style="@style/Divider.Vertical.Spreading" />
+
+        <include
+            android:id="@+id/today_pressure"
+
+            layout="@layout/today_extra"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.60"
+
+            />
+
+        <View style="@style/Divider.Vertical.Spreading" />
+
+        <include
+            android:id="@+id/today_humidity"
+
+            layout="@layout/today_extra"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.60"
+
+            />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
