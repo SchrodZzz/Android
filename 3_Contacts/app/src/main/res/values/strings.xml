@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Contacts</string>
+
+    <string name="no_permission_message">
+        Permission is needed for the correct work of this app. We won\'t steal your sacred private data 👺
+    </string>
+</resources>
