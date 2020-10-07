@@ -3,6 +3,7 @@
     package="com.example.images">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:allowBackup="true"
@@ -11,14 +12,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+
+        <service android:name=".services.InternetService" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="Preview List">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ImageActivity"></activity>
+        <activity
+            android:name=".FullscreenActivity"
+            android:label="Fullscreen" />
     </application>
 
 </manifest>

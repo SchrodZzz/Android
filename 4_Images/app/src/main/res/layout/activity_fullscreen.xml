@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/colorPrimaryDark"
+
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fullscreen_image_group"
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_margin="20dp"
+
+        android:background="@color/colorPrimary"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        card_view:cardCornerRadius="8dp"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="@color/colorPrimary"
+
+
+            android:orientation="vertical"
+
+            android:padding="10dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/fullscreen_image"
+
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".69"
+
+                android:contentDescription="@string/image_description"
+
+                android:scaleType="fitCenter"
+
+                android:src="@mipmap/ic_launcher"
+
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+
+                android:layout_weight="0.02" />
+
+            <TextView
+                android:id="@+id/fullscreen_description"
+
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+
+                android:layout_weight=".29"
+                android:text="@string/empty_description"
+
+                android:textColor="@color/cardview_light_background"
+
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/fullscreen_progress"
+
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        tools:visibility="invisible"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

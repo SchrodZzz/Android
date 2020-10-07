@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Images</string>
+
+    <string name="no_internet_connection_title">Problems with internet connection!</string>
+    <string name="no_internet_connection_text">Check your connection to internet.</string>
+
+    <string name="logic_error_title">Oh, what a horror!</string>
+    <string name="no_intent_field_error_text">Previous window tricked me! Kik him, hi-hi-hi..</string>
+
+    <string name="image_description">Fullscreen Image</string>
+    <string name="empty_description">No description.</string>
+</resources>
