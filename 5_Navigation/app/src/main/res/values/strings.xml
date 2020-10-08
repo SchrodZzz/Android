@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Navigation</string>
+    <string name="_0">0</string>
+    <string name="open_next">Open Next</string>
+    <string name="home">Home</string>
+    <string name="favorites">Urgent</string>
+    <string name="search">Search</string>
+</resources>
