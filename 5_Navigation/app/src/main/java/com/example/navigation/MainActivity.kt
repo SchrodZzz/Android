@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
 
     private var savedStateSparseArray = SparseArray<Fragment.SavedState>()
     private var currentSelectItemId = R.id.nav_home
+    private var isFirstFragmentCall = true
     private val tabIdToName = mapOf(
         R.id.nav_home to "Home",
         R.id.nav_favorites to "Favorites",
@@ -40,6 +41,7 @@ class MainActivity : AppCompatActivity() {
 
         if (bottom_navigation != null) {
             bottom_navigation.setOnNavigationItemSelectedListener(bottomNavListener)
+            bottom_navigation.selectedItemId = currentSelectItemId
         } else {
             side_navigation.setNavigationItemSelectedListener(sideNavListener)
         }
@@ -71,10 +73,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setFragment(name: String, itemId: Int) {
-        if (supportFragmentManager.findFragmentByTag(name) == null) {
+        if (supportFragmentManager.findFragmentByTag(name) == null
+            && (itemId != currentSelectItemId || isFirstFragmentCall)) {
             saveFragmentState()
             createFragment(name, itemId)
             currentSelectItemId = itemId
+            isFirstFragmentCall = false
         }
     }
 
